@@ -3,35 +3,424 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>مخيم الرشاد</title>
-    <script src="jquery-1.9.1.min.js" type="text/javascript"></script>
-    <link href="jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css" />
-    <script src="jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+     <script src="jquery-1.9.1.min.js" type="text/javascript"></script>
+     <link href="jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css" />
+     <script src="jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
      <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
-    <link href="themes/car.min.css" rel="stylesheet" type="text/css" />
-    <script src="mainmenu.js" type="text/javascript"></script>
-    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-    <style type ="text/css">
-          #home, #showdata { width: 100%; height: 100%; padding: 0; }
-   </style>
+     <link rel="stylesheet" href="themes/rashad.min.css" />
+     <script type="text/javascript" src="cordova.js"></script>
+     <script src="main.js" type="text/javascript"></script>
+    
 </head>
 <body dir="rtl" style="padding:10px;"  onload="loadmap();">
-<div id="MainMenu" data-theme="b">
-   <ul data-role="listview" id="menudata" data-autodividers="false" data-inset="false" data-split-icon="arrow-l" data-split-theme="d">
-    
-   </ul>
-</div>
-<div data-role="page" id="home" data-theme="a">
+
+<!-- home -->
+<div data-role="page" id="home" data-theme="b">
  <div data-role="header" data-position="fixed" >
-     <a href="#MainMenu" data-rel="popup" class="ui-btn ui-btn-right  ui-icon-bars ui-btn-icon-right" >القائمة</a>
-    <h1 style="text-align:center;">شركة مخيم الرشاد  </h1>
+      <h1 style="text-align:center;">شركة مخيم الرشاد  </h1>
   </div>
-  <div data-role="content" class="ui-content" id="showdata" >
-    
+  <div data-role="main" class="ui-content" >
+
+   <fieldset class="ui-grid-b" style="text-align:center;">
+
+
+                <div class="ui-block-a">
+                 <a href="#view"> <img alt="" src="Images/view.png" style="width: 40px; height: 40px" /></a>
+                 <a href="#view" style=" text-decoration:none;"><h4>الرؤية </h4> </a>
+                  
+                </div>
+                <div class="ui-block-b">
+                    <a href="#call"> <img alt="" src="Images/contact.png" style="width: 40px; height: 40px" /></a>
+                    <a href="#call" style=" text-decoration:none;"><h4>للاتصال بنا</h4> </a>
+                </div>
+                 <div class="ui-block-c">
+                    <a href="#service" > <img alt="" src="Images/services.png" style="width: 40px; height: 40px" /></a>
+                    <a href="#service" style=" text-decoration:none;"  ><h4>خــدمتنا</h4> </a>
+                </div>
+                
+              
+              <div class="ui-block-a">
+                 <a href="http://www.alrshad.com"> <img alt="" src="Images/map.png" style="width: 40px; height: 40px" /></a>
+                 <a href="http://www.alrshad.com" style=" text-decoration:none;"><h4> موقعنا علي الانترنت </h4> </a>
+                  
+                </div>
+                <div class="ui-block-b">
+                    <a href="#sending"> <img alt="" src="Images/send.png" style="width: 40px; height: 40px" /></a>
+                    <a href="#sending" style=" text-decoration:none;"><h4>شاركنا برائيك</h4> </a>
+                </div>
+                 <div class="ui-block-c">
+                    <a href="#login" > <img alt="" src="Images/login.png" style="width: 40px; height: 40px" /></a>
+                    <a href="#login" style=" text-decoration:none;"  ><h4>تسجيل دخول </h4> </a>
+                </div>
+                 <div class="ui-block-a">
+                    <a href="#loc1" > <img alt="" src="Images/loc2.png" style="width: 40px; height: 40px" /></a>
+                    <a href="#loc1" style=" text-decoration:none;"  ><h4>مواقع المخفض </h4> </a>
+                </div>
+                <div class="ui-block-b">
+                    <a href="#loc2" > <img alt="" src="Images/loc1.png" style="width: 40px; height: 40px" /></a>
+                    <a href="#loc2" style=" text-decoration:none;"  ><h4>مواقع العام </h4> </a>
+                </div>
+                 <div class="ui-block-c">
+                    <a href="#option" > <img alt="" src="Images/offer.png" style="width: 40px; height: 40px" /></a>
+                    <a href="#option" style=" text-decoration:none;"  ><h4>مــزايـانـا  </h4> </a>
+                </div>
+
+            </fieldset>
+           
+
   </div>
   <div data-role="footer" data-position="fixed" >
   <h6 style="text-align:center;">جميع الحقوق محفوظة لمخيم الرشاد  2015</h6>
   </div>
 </div>
-<input type="hidden" id="mapt" name="mapt" value="" />
+
+<!-- View   -->
+
+<div data-role="page" id="view" data-theme="b">
+ <div data-role="header" data-position="fixed" >
+        <h1 style="text-align:center;">شركة مخيم الرشاد  </h1>
+        <a href="#home"  class="ui-btn ui-btn-right  ui-icon-grid  ui-btn-icon-notext" ></a>
+  </div>
+  <div data-role="main" class="ui-content" >
+    <h2 style ="text-align:center ;">رؤيــة المخيم</h2>
+    <h3 style="text-align:right">أن تكون شركة مخيم الرشاد الرائدة لخدمة كل حاج بجودة عالية ، وأن تقدم غذاءً متكاملاً للروح والبدن ، من دون إفراط أو تفريط ليتفرغ الحاج لأداء الركن الخامس بكل يسر وسهولة وأن نكون الشركة التي يقصدها ويختارها الحجاج من كل مكان</h3>
+  </div>
+  <div data-role="footer" data-position="fixed" >
+  <h6 style="text-align:center;">جميع الحقوق محفوظة لمخيم الرشاد  2015</h6>
+ </div>
+</div>
+
+<!-- Call   -->
+
+<div data-role="page" id="call" data-theme="b">
+ <div data-role="header" data-position="fixed" >
+        <h1 style="text-align:center;">شركة مخيم الرشاد  </h1>
+        <a href="#home"  class="ui-btn ui-btn-right  ui-icon-grid  ui-btn-icon-notext" ></a>
+  </div>
+  <div data-role="main" class="ui-content" >
+    <h2 style ="text-align:center ;">للاتصال بنا</h2>
+    <h3 style="text-align:right">
+    <p>شرفية :</p>
+    <p>الشرفيه عمائر الإسكان - بجوار الدفاع المدني</p>
+    <p><a href="tel:0126575073" >هاتف :  0126575073    -   </a> <a href="tel:0126575072"> 0126575072 </a></p>
+    <p><a href="tel:0555605901">جوال:  0555605901</a></p>
+    <p>  فاكس:  0126503334 </p>
+    <p> للمراسلات :</p>
+    <p><a href="mailto:hafiz_aljahwri@yahoo.com"> hafiz_aljahwri@yahoo.com</a></p>
+    </h3>
+    </div>
+  <div data-role="footer" data-position="fixed" >
+  <h6 style="text-align:center;">جميع الحقوق محفوظة لمخيم الرشاد  2015</h6>
+ </div>
+</div>
+
+
+<!-- service   -->
+
+<div data-role="page" id="service" data-theme="b">
+ <div data-role="header" data-position="fixed" >
+        <h1 style="text-align:center;">شركة مخيم الرشاد  </h1>
+        <a href="#home"  class="ui-btn ui-btn-right  ui-icon-grid  ui-btn-icon-notext" ></a>
+  </div>
+  <div data-role="main" class="ui-content" >   <h2 style ="text-align:center ;">خـــدمتنــا</h2>
+     <ul data-role="listview" data-autodividers="false" data-inset="false" data-split-icon="arrow-l" data-split-theme="a">
+        <li data-icon="star"><a href="#"  style="text-align:right"><h2>خيام مكيفة في منى وعرفات</h2></a></li>
+        <li data-icon="star"><a href="#"  style="text-align:right"><h2>موقع متميز في منى قريب من الجمرات</h2></a></li>
+        <li data-icon="star"><a href="#" style="text-align:right"><h2>وجبات غذائية راقية و متنوعة .. مشروبات باردة و ساخنة على مدار الساعة</h2></a></li>
+        <li data-icon="star"><a href="#"  style="text-align:right"><h2>القهوة العربية و التمر على مدار الساعة</h2></a></li>
+        <li data-icon="star"><a href="#"   style="text-align:right"><h2>مواصلات سياحية مريحة و مكيفة</h2></a></li>   
+        <li data-icon="star"><a href="#"   style="text-align:right"><h2>برامج توعوية و ثقافية</h2></a></li> 
+        <li data-icon="star"><a href="#"   style="text-align:right"><h2>خدمات طبية .. طبيب و طبيبة مرافقين في الحملة </h2></a></li> 
+        <li data-icon="star"><a href="#"   style="text-align:right"><h2>يحرص المخيم على استضافة و دعوة عدد من المشايخ و طلبة العلم</h2></a></li> 
+        <li data-icon="star"><a href="#"   style="text-align:right"><h2>فريق خدمة مكون من مجموعة من العاملين تتوفر فيهم المواصفات الخلقية والدينية والكفاءة</h2></a></li>     
+  </ul> 
+  
+    </div>
+  <div data-role="footer" data-position="fixed" >
+  <h6 style="text-align:center;">جميع الحقوق محفوظة لمخيم الرشاد  2015</h6>
+ </div>
+</div>
+
+
+
+<!--      Send   -->
+<div data-role="page" id="sending" data-theme="b">
+  <div data-role="header" data-position="fixed" >
+        <h1 style="text-align:center;">شركة مخيم الرشاد  </h1>
+        <a href="#home"  class="ui-btn ui-btn-right  ui-icon-grid  ui-btn-icon-notext" ></a>
+  </div>
+  <div data-role="main" class="ui-content" >
+   <h2 style="text-align:center"> شاركنا برائيك</h2>
+      <label for="fname">الاسم الثلاثى:</label>
+      <input type="text" name="fname" id="fname" style="text-align:right">
+      <label for="jawal">رقم الجوال :</label>
+      <input type="text" name="jawal" id="jawal" style="text-align:right">
+      <label for="email"> البريد الالكتروني :</label>
+      <input type="email" name="email" id="email" >
+      <label for="title">عنوان الرسالة  :</label>
+      <input type="text" name="title" id="title" style="text-align:right">
+      <label for="message">نص الرسالة  :</label>
+     <textarea cols="40" rows="12" name="message" id="message" style="text-align:right"></textarea>
+     <a href="javascript:senduser()"  class="ui-btn  ui-shadow ui-corner-all" style="background-color:#0ec2db; color:White; " >ارسال </a>  
+  </div>
+  <div data-role="footer" data-position="fixed" >
+     <h6 style="text-align:center;">جميع الحقوق محفوظة لمخيم الرشاد  2015</h6>
+  </div>
+</div>
+
+
+
+<!-- Loigin   -->
+<div data-role="page" id="login" data-theme="b">
+  <div data-role="header" data-position="fixed" >
+        <h1 style="text-align:center;">شركة مخيم الرشاد  </h1>
+        <a href="#home"  class="ui-btn ui-btn-right  ui-icon-grid  ui-btn-icon-notext" ></a>
+  </div>
+  <div data-role="main" class="ui-content" >
+    <h2 style ="text-align:center ;">تسجيل دخول</h2>
+       <input type="text" name="luserid" id="luserid" style="text-align:right; direction:rtl" placeholder="رقم المستخدم">
+       <input type="password" name="lpassword" id="lpassword" style="text-align:right; direction:rtl" placeholder="كلمة المرور">
+    <a href="javascript:loginuser()"  class="ui-btn  ui-shadow ui-corner-all" style="background-color:#0ec2db; color:White; margin:10px" >تسجيل دخول</a> 
+   
+ </div>
+  <div data-role="footer" data-position="fixed" >
+  <h6 style="text-align:center;">جميع الحقوق محفوظة لمخيم الرشاد  2015</h6>
+ </div>
+</div>
+
+
+<!-- Loc1   -->
+<div data-role="page" id="loc1" data-theme="b">
+  <div data-role="header" data-position="fixed" >
+        <h1 style="text-align:center;">شركة مخيم الرشاد  </h1>
+        <a href="#home"  class="ui-btn ui-btn-right  ui-icon-grid  ui-btn-icon-notext" ></a>
+  </div>
+  <div data-role="main" class="ui-content" >
+    <div data-role="content" class="ui-content">
+    <h2 style ="text-align:center ;">موقعنا للحج المخفض</h2>
+    <br />
+   
+          
+        <a href="https://maps.google.com/maps?q=21.5427824,39.2350360" class="ui-btn  ui-shadow ui-shadow ui-corner-all" style="background-color:#0ec2db; color:White;" >موقع التجمع بجدة للصعود الي منى</a>
+        <a href="https://maps.google.com/maps?q=24.086890,38.074180" class="ui-btn  ui-shadow ui-shadow ui-corner-all" style="background-color:#0ec2db; color:White;"  >موقع التجمع بينبع للصعود الي منى</a>
+        <a href="https://maps.google.com/maps?q=21.413604,39.880502" class="ui-btn  ui-shadow ui-shadow ui-corner-all" style="background-color:#0ec2db; color:White;"  >موقعنا في منى مخفض</a>
+        <a href="https://maps.google.com/maps?q=21.342510,39.961720" class="ui-btn  ui-shadow ui-shadow ui-corner-all" style="background-color:#0ec2db; color:White;"  >موقعنا في عرفة مخفض</a>
+        <a href="https://maps.google.com/maps?q=21.389080,39.898743" class="ui-btn  ui-shadow ui-shadow ui-corner-all" style="background-color:#0ec2db; color:White;"  >موقعنا في مزدلفة مخفض</a>     
+ 
+  <div data-role="footer" data-position="fixed" >
+  <h6 style="text-align:center;">جميع الحقوق محفوظة لمخيم الرشاد  2015</h6>
+  </div>
+</div>
+ </div>
+  <div data-role="footer" data-position="fixed" >
+  <h6 style="text-align:center;">جميع الحقوق محفوظة لمخيم الرشاد  2015</h6>
+ </div>
+</div>
+
+
+<!-- Loc2   -->
+<div data-role="page" id="loc2" data-theme="b">
+  <div data-role="header" data-position="fixed" >
+        <h1 style="text-align:center;">شركة مخيم الرشاد  </h1>
+        <a href="#home"  class="ui-btn ui-btn-right  ui-icon-grid  ui-btn-icon-notext" ></a>
+  </div>
+     <div data-role="content" class="ui-content">
+    <h2 style ="text-align:center ;">موقعنا للحج العام</h2>
+    <br />
+       <a href="https://maps.google.com/maps?q=21.5427824,39.2350360"  class="ui-btn  ui-shadow ui-shadow ui-corner-all" style="background-color:#0ec2db; color:White;" >موقع التجمع بجدة للصعود الي منى</a>
+       <a href="https://maps.google.com/maps?q=24.086890,38.074180" class="ui-btn  ui-shadow ui-shadow ui-corner-all" style="background-color:#0ec2db; color:White;" >موقع التجمع بينبع للصعود الي منى</a>
+       <a href="https://maps.google.com/maps?q=21.424920,39.874330" class="ui-btn  ui-shadow ui-shadow ui-corner-all" style="background-color:#0ec2db; color:White;" >موقعنا في منى عام</a>
+       <a href="https://maps.google.com/maps?q=21.344250,39.959700" class="ui-btn  ui-shadow ui-shadow ui-corner-all" style="background-color:#0ec2db; color:White;" >موقعنا في عرفة عام</a>   
+       <a href="https://maps.google.com/maps?q=21.387803,39.895884" class="ui-btn  ui-shadow ui-shadow ui-corner-all" style="background-color:#0ec2db; color:White;" >موقعنا في مزدلفة عام</a>  
+  </div>
+  <div data-role="footer" data-position="fixed" >
+  <h6 style="text-align:center;">جميع الحقوق محفوظة لمخيم الرشاد  2015</h6>
+  </div>
+</div>
+
+
+
+<!-- option   -->
+<div data-role="page" id="option" data-theme="b">
+  <div data-role="header" data-position="fixed" >
+        <h1 style="text-align:center;">شركة مخيم الرشاد  </h1>
+        <a href="#home"  class="ui-btn ui-btn-right  ui-icon-grid  ui-btn-icon-notext" ></a>
+  </div>
+     <div data-role="content" class="ui-content">
+      <h2 style ="text-align:center ;">مــزايـانـا</h2>
+     <ul data-role="listview" data-autodividers="false" data-inset="false" data-split-icon="arrow-l" data-split-theme="a">
+        <li data-icon="star"><a href="#"  style="text-align:right"><h2>توفير المكان اللائق لحجاج بيت الله والمريح الذي يعين على الطاعة</h2></a></li>
+        <li data-icon="star"><a href="#"  style="text-align:right"><h2>توفير الوجبات الساخنة والجافة الصحية المتنوعة من خلال 3 وجبات يوميه، بالإضافة إلى المشروبات الساخنة الباردة والتمر والقهوة العربية والمعمول والبسكويت المتنوع والفواكه الطازجة على مدار الساعة</h2></a></li>
+        <li data-icon="star"><a href="#" style="text-align:right"><h2>وجبات غذائية راقية و متنوعة .. مشروبات باردة و ساخنة على مدار الساعة</h2></a></li>
+        <li data-icon="star"><a href="#"  style="text-align:right"><h2>توفير المواصلات المريحة و القطار لتنقل الحجاج داخل المشاعر</h2></a></li>
+        <li data-icon="star"><a href="#"   style="text-align:right"><h2>حفل معايدة مساء يوم العيد بحضرة نخبة من المشايخ يتخلله توزيع الحلويات والمعايدة والبخور في المخيم</h2></a></li>   
+        <li data-icon="star"><a href="#"   style="text-align:right"><h2>يوفر المخيم الحصى لرمي الجمرات</h2></a></li> 
+        <li data-icon="star"><a href="#"   style="text-align:right"><h2>يقوم المخيم بتفويج الحجاج من المخيم الى الجمرات مع مرشد لكل فوج </h2></a></li> 
+        <li data-icon="star"><a href="#"   style="text-align:right"><h2>هدية لكل حاج حقيبة للملابس والأغراض الشخصية</h2></a></li> 
+  </ul>
+    </div>
+  <div data-role="footer" data-position="fixed" >
+  <h6 style="text-align:center;">جميع الحقوق محفوظة لمخيم الرشاد  2015</h6>
+  </div>
+</div>
+
+
+
+
+<!-- user home -->
+<div data-role="page" id="uhome" data-theme="b">
+ <div data-role="header" data-position="fixed" >
+      <h1 style="text-align:center;">شركة مخيم الرشاد  </h1>
+  </div>
+  <div data-role="main" class="ui-content" >
+
+   <fieldset class="ui-grid-b" style="text-align:center;">
+
+
+                <div class="ui-block-a">
+                 <a href="#Qrcard"> <img alt="" src="Images/qreader.png" style="width: 40px; height: 40px" /></a>
+                 <a href="#Qrcard" style=" text-decoration:none;"><h4>قراءة الكرت </h4> </a>
+                  
+                </div>
+                <div class="ui-block-b">
+                    <a href="#process"> <img alt="" src="Images/list.png" style="width: 40px; height: 40px" /></a>
+                    <a href="#process" style=" text-decoration:none;"><h4>معالجة القراءة </h4> </a>
+                </div>
+                 <div class="ui-block-c">
+                    <a href="#allread" > <img alt="" src="Images/allhaj.png" style="width: 40px; height: 40px" /></a>
+                    <a href="#allread" style=" text-decoration:none;"  ><h4>كل القراءات</h4> </a>
+                </div>
+                
+              
+              <div class="ui-block-a">
+                 <a href="#searchhaj"> <img alt="" src="Images/search.png" style="width: 40px; height: 40px" /></a>
+                 <a href="#searchhaj" style=" text-decoration:none;"><h4>بحث عن حاج</h4> </a>
+                  
+                </div>
+                <div class="ui-block-b">
+                    <a href="#home"> <img alt="" src="Images/logout.png" style="width: 40px; height: 40px" /></a>
+                    <a href="#home" style=" text-decoration:none;"><h4>خروج </h4> </a>
+                </div>
+              
+            </fieldset>
+           
+
+  </div>
+  <div data-role="footer" data-position="fixed" >
+  <h6 style="text-align:center;">جميع الحقوق محفوظة لمخيم الرشاد  2015</h6>
+  </div>
+</div>
+
+
+
+<!-- list hajj search   -->
+<div data-role="page" id="searchhaj" data-theme="b">
+  <div data-role="header" data-position="fixed" >
+        <h1 style="text-align:center;">شركة مخيم الرشاد  </h1>
+        <a href="#uhome"  class="ui-btn ui-btn-right  ui-icon-grid  ui-btn-icon-notext" ></a>
+  </div>
+     <div data-role="content" class="ui-content">
+      <h1 style="text-align:center">بيانات جميع الحجاج</h1>
+      <form class="ui-filterable" dir="rtl">
+      <input style="text-align:right;" id="compFilter" data-type="search" placeholder="النص المراد البحث عنه" >
+     </form>
+    <ul data-role="listview" id="loc" data-filter="true" data-input="#compFilter" style="margin:10px; font-weight :normal;" data-autodividers="false" data-inset="false" data-split-icon="arrow-l" data-split-theme="d">
+    
+    </ul>
+     
+    </div>
+  <div data-role="footer" data-position="fixed" >
+  <h6 style="text-align:center;">جميع الحقوق محفوظة لمخيم الرشاد  2015</h6>
+  </div>
+</div>
+
+
+
+<!-- Read Card   -->
+<div data-role="page" id="Qrcard" data-theme="b">
+  <div data-role="header" data-position="fixed" >
+        <h1 style="text-align:center;">شركة مخيم الرشاد  </h1>
+        <a href="#uhome"  class="ui-btn ui-btn-right  ui-icon-grid  ui-btn-icon-notext" ></a>
+  </div>
+     <div data-role="content" class="ui-content">
+        <button id="startScan" class="ui-btn  ui-shadow ui-corner-all" style="background-color:#0ec2db; color:White; margin:10px" > بدء القراءة </button>
+            <div class="ui-field-contain" style="text-align:right; direction:rtl;">
+            
+            <select name="cmb" id="cmb" data-iconpos="left" style="text-align:right; direction:rtl;">
+                <option value="0">يجب تحديد نوع التفويج</option>
+                
+            </select>
+           </div>
+
+        <div style="text-align:right ; direction :rtl" id="results"></div>
+      
+        <script type="text/javascript" src="index.js"></script>
+     
+    </div>
+  <div data-role="footer" data-position="fixed" >
+  <h6 style="text-align:center;">جميع الحقوق محفوظة لمخيم الرشاد  2015</h6>
+  </div>
+</div>
+
+
+<!-- list All Read   -->
+<div data-role="page" id="allread" data-theme="b">
+  <div data-role="header" data-position="fixed" >
+        <h1 style="text-align:center;">شركة مخيم الرشاد  </h1>
+        <a href="#uhome"  class="ui-btn ui-btn-right  ui-icon-grid  ui-btn-icon-notext" ></a>
+  </div>
+     <div data-role="content" class="ui-content">
+      <h1 style="text-align:center">عرض كلي للقراءات</h1>
+       <button onclick="LoadRead()" class="ui-btn  ui-shadow ui-corner-all" style="background-color:#0ec2db; color:White; margin:10px" > عرض القراءات </button>
+            <div class="ui-field-contain" style="text-align:right; direction:rtl;">
+            
+            <select name="cmbs" id="cmbs" data-iconpos="left" style="text-align:right; direction:rtl;">
+                <option value="0">يجب تحديد نوع التفويج</option>
+                
+            </select>
+           </div>
+      <form class="ui-filterable" dir="rtl">
+      <input style="text-align:right;" id="tballr" data-type="search" placeholder="النص المراد البحث عنه" >
+     </form>
+    <ul data-role="listview" id="lallreader" data-filter="true" data-input="#tballr" style="margin:10px; font-weight :normal;" data-autodividers="false" data-inset="false" data-split-icon="arrow-l" data-split-theme="d">
+    
+    </ul>
+     
+    </div>
+  <div data-role="footer" data-position="fixed" >
+  <h6 style="text-align:center;">جميع الحقوق محفوظة لمخيم الرشاد  2015</h6>
+  </div>
+</div>
+
+
+<!-- list process Read   -->
+<div data-role="page" id="process" data-theme="b">
+  <div data-role="header" data-position="fixed" >
+        <h1 style="text-align:center;">شركة مخيم الرشاد  </h1>
+        <a href="#uhome"  class="ui-btn ui-btn-right  ui-icon-grid  ui-btn-icon-notext" ></a>
+  </div>
+     <div data-role="content" class="ui-content">
+      <h1 style="text-align:center">معالجة القراءات</h1>
+       <button onclick="Loadprocess()" class="ui-btn  ui-shadow ui-corner-all" style="background-color:#0ec2db; color:White; margin:10px" > عرض القراءات </button>
+            <div class="ui-field-contain" style="text-align:right; direction:rtl;">
+            
+            <select name="cmbf" id="Select1" data-iconpos="left" style="text-align:right; direction:rtl;">
+                <option value="0">يجب تحديد نوع التفويج</option>
+                
+            </select>
+           </div>
+      <form class="ui-filterable" dir="rtl">
+      <input style="text-align:right;" id="tbfind" data-type="search" placeholder="النص المراد البحث عنه" >
+     </form>
+    <ul data-role="listview" id="lproreader" data-filter="true" data-input="#tbfind" style="margin:10px; font-weight :normal;" data-autodividers="false" data-inset="false" data-split-icon="arrow-l" data-split-theme="d">
+    
+    </ul>
+     
+    </div>
+  <div data-role="footer" data-position="fixed" >
+  <h6 style="text-align:center;">جميع الحقوق محفوظة لمخيم الرشاد  2015</h6>
+  </div>
+</div>
+
 </body>
 </html>
